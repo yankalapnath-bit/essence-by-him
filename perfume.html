@@ -25,6 +25,7 @@
                 <li><a href="perfume.html" class="nav-link active">PERFUME</a></li>
                 <li><a href="reviews.html" class="nav-link">REVIEWS</a></li>
                 <li><a href="contact.html" class="nav-link">CONTACT US</a></li>
+                <li><a href="#" class="nav-link cart-icon" id="cartIcon">🛒 CART (<span id="cartCount">0</span>)</a></li>
             </ul>
         </div>
     </nav>
@@ -34,105 +35,37 @@
         <div class="container">
             <h2 class="page-title">Our Collection</h2>
 
-            <div class="perfume-gallery">
-                <div class="perfume-item">
-                    <div class="perfume-item-image">
-                        <img src="https://via.placeholder.com/250x350?text=Premium+Essence" alt="Premium Essence">
-                    </div>
-                    <div class="perfume-item-content">
-                        <h3>Premium Essence</h3>
-                        <p class="perfume-price">$89.99</p>
-                        <p>A luxurious fragrance with notes of oak, vanilla, and sandalwood. Perfect for the discerning gentleman.</p>
-                        <button>Add to Cart</button>
-                    </div>
-                </div>
+            <!-- SEARCH BAR -->
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-bar" 
+                    placeholder="Search perfumes by name or scent..."
+                >
+                <button class="search-btn">Search</button>
+            </div>
 
-                <div class="perfume-item">
-                    <div class="perfume-item-image">
-                        <img src="https://via.placeholder.com/250x350?text=Midnight+Mystery" alt="Midnight Mystery">
-                    </div>
-                    <div class="perfume-item-content">
-                        <h3>Midnight Mystery</h3>
-                        <p class="perfume-price">$79.99</p>
-                        <p>A dark and sensual fragrance with hints of amber, musk, and leather. Ideal for evening wear.</p>
-                        <button>Add to Cart</button>
-                    </div>
-                </div>
+            <div class="perfume-gallery" id="perfumeGallery">
+                <!-- Perfumes will be loaded here by JavaScript -->
+            </div>
 
-                <div class="perfume-item">
-                    <div class="perfume-item-image">
-                        <img src="https://via.placeholder.com/250x350?text=Fresh+Horizon" alt="Fresh Horizon">
-                    </div>
-                    <div class="perfume-item-content">
-                        <h3>Fresh Horizon</h3>
-                        <p class="perfume-price">$74.99</p>
-                        <p>A crisp and refreshing scent with citrus and sea notes. Perfect for daily wear and professional settings.</p>
-                        <button>Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="perfume-item">
-                    <div class="perfume-item-image">
-                        <img src="https://via.placeholder.com/250x350?text=Amber+Aura" alt="Amber Aura">
-                    </div>
-                    <div class="perfume-item-content">
-                        <h3>Amber Aura</h3>
-                        <p class="perfume-price">$84.99</p>
-                        <p>A warm and inviting fragrance with amber, spice, and woody notes. Sophisticated and alluring.</p>
-                        <button>Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="perfume-item">
-                    <div class="perfume-item-image">
-                        <img src="https://via.placeholder.com/250x350?text=Silver+Storm" alt="Silver Storm">
-                    </div>
-                    <div class="perfume-item-content">
-                        <h3>Silver Storm</h3>
-                        <p class="perfume-price">$94.99</p>
-                        <p>A bold and powerful fragrance with metallic and aquatic notes. A statement of strength and confidence.</p>
-                        <button>Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="perfume-item">
-                    <div class="perfume-item-image">
-                        <img src="https://via.placeholder.com/250x350?text=Velvet+Touch" alt="Velvet Touch">
-                    </div>
-                    <div class="perfume-item-content">
-                        <h3>Velvet Touch</h3>
-                        <p class="perfume-price">$89.99</p>
-                        <p>A soft and elegant fragrance with velvety notes of iris and musk. Timeless and refined.</p>
-                        <button>Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="perfume-item">
-                    <div class="perfume-item-image">
-                        <img src="https://via.placeholder.com/250x350?text=Ocean+Breeze" alt="Ocean Breeze">
-                    </div>
-                    <div class="perfume-item-content">
-                        <h3>Ocean Breeze</h3>
-                        <p class="perfume-price">$69.99</p>
-                        <p>A fresh and breezy fragrance with marine and coconut notes. Reminiscent of a tropical paradise.</p>
-                        <button>Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="perfume-item">
-                    <div class="perfume-item-image">
-                        <img src="https://via.placeholder.com/250x350?text=Midnight+Luxe" alt="Midnight Luxe">
-                    </div>
-                    <div class="perfume-item-content">
-                        <h3>Midnight Luxe</h3>
-                        <p class="perfume-price">$99.99</p>
-                        <p>Our most exclusive fragrance with rare oud, frankincense, and rose notes. For the connoisseur.</p>
-                        <button>Add to Cart</button>
-                    </div>
-                </div>
+            <div id="noResults" class="no-results" style="display: none; text-align: center; padding: 40px;">
+                <p style="font-size: 1.2rem; color: #999;">No perfumes found. Try a different search.</p>
             </div>
         </div>
     </section>
+
+    <!-- FLOATING CART CARD -->
+    <div class="floating-cart" id="floatingCart" style="display: none;">
+        <button class="close-cart" id="closeCart">&times;</button>
+        <h3>Cart Item</h3>
+        <div class="cart-item-details" id="cartItemDetails"></div>
+        <div class="cart-actions">
+            <button class="btn-continue-shopping" id="continueShopping">Continue Shopping</button>
+            <button class="btn-checkout">Proceed to Checkout</button>
+        </div>
+    </div>
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -147,5 +80,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="perfume-data.js"></script>
 </body>
 </html>
