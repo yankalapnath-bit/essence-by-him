@@ -25,6 +25,7 @@
                 <li><a href="perfume.html" class="nav-link">PERFUME</a></li>
                 <li><a href="reviews.html" class="nav-link active">REVIEWS</a></li>
                 <li><a href="contact.html" class="nav-link">CONTACT US</a></li>
+                <li><a href="#" class="nav-link cart-icon" id="cartIcon">🛒 CART (<span id="cartCount">0</span>)</a></li>
             </ul>
         </div>
     </nav>
@@ -32,91 +33,77 @@
     <!-- MAIN CONTENT -->
     <section class="page-content">
         <div class="container">
-            <h2 class="page-title">Customer Reviews</h2>
+            <h2 class="page-title">Customer Reviews & Submit Your Review</h2>
 
-            <div class="reviews-container">
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="review-text">
-                        "Essence by Him Premium Essence is absolutely incredible! The scent is sophisticated and long-lasting. 
-                        I've received countless compliments since I started wearing it. Highly recommended!"
-                    </p>
-                    <p class="reviewer-name">- James M.</p>
-                </div>
+            <!-- SUBMIT REVIEW FORM -->
+            <div style="max-width: 600px; margin: 0 auto 60px; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+                <h3 style="color: #d4af37; margin-bottom: 30px; text-transform: uppercase;">Share Your Experience</h3>
+                <form id="reviewForm">
+                    <div class="form-group">
+                        <label for="reviewName">Your Name *</label>
+                        <input type="text" id="reviewName" name="name" required>
+                    </div>
 
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="review-text">
-                        "The Midnight Mystery fragrance is perfect for evening events. It's dark, mysterious, and absolutely captivating. 
-                        This is my go-to scent now!"
-                    </p>
-                    <p class="reviewer-name">- David R.</p>
-                </div>
+                    <div class="form-group">
+                        <label for="reviewEmail">Your Email *</label>
+                        <input type="email" id="reviewEmail" name="email" required>
+                    </div>
 
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="review-text">
-                        "Fresh Horizon is my daily driver. It's fresh, crisp, and professional. Perfect for the office and casual outings. 
-                        Great value for money!"
-                    </p>
-                    <p class="reviewer-name">- Michael T.</p>
-                </div>
+                    <div class="form-group">
+                        <label for="productSelect">Select Perfume *</label>
+                        <select id="productSelect" name="productId" required>
+                            <option value="">-- Choose a perfume --</option>
+                            <option value="1">Premium Essence - $89.99</option>
+                            <option value="2">Midnight Mystery - $79.99</option>
+                            <option value="3">Fresh Horizon - $74.99</option>
+                            <option value="4">Amber Aura - $84.99</option>
+                            <option value="5">Silver Storm - $94.99</option>
+                            <option value="6">Velvet Touch - $89.99</option>
+                            <option value="7">Ocean Breeze - $69.99</option>
+                            <option value="8">Midnight Luxe - $99.99</option>
+                        </select>
+                    </div>
 
-                <div class="review-card">
-                    <div class="stars">★★★★☆</div>
-                    <p class="review-text">
-                        "Amber Aura is a fantastic fragrance! Warm, inviting, and long-lasting. I love how it evolves throughout the day. 
-                        Definitely a keeper."
-                    </p>
-                    <p class="reviewer-name">- Robert K.</p>
-                </div>
+                    <div class="form-group">
+                        <label for="rating">Rating *</label>
+                        <select id="rating" name="rating" required>
+                            <option value="">-- Select Rating --</option>
+                            <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+                            <option value="4">⭐⭐⭐⭐ Very Good</option>
+                            <option value="3">⭐⭐⭐ Good</option>
+                            <option value="2">⭐⭐ Fair</option>
+                            <option value="1">⭐ Poor</option>
+                        </select>
+                    </div>
 
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="review-text">
-                        "I've tried many luxury fragrances, but Essence by Him stands out. The quality is exceptional, and the price is fair. 
-                        I'm a loyal customer now!"
-                    </p>
-                    <p class="reviewer-name">- Christopher L.</p>
-                </div>
+                    <div class="form-group">
+                        <label for="reviewText">Your Review *</label>
+                        <textarea id="reviewText" name="text" rows="5" placeholder="Share your thoughts about this perfume..." required></textarea>
+                    </div>
 
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="review-text">
-                        "Silver Storm is incredible! It's bold, powerful, and makes a statement. This fragrance has become my signature scent. 
-                        Can't imagine wearing anything else!"
-                    </p>
-                    <p class="reviewer-name">- Alexander P.</p>
-                </div>
+                    <button type="submit" style="width: 100%;">Submit Review</button>
+                </form>
+            </div>
 
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="review-text">
-                        "The customer service from Essence by Him is outstanding! They helped me find the perfect fragrance for my preferences. 
-                        Quality products and amazing service!"
-                    </p>
-                    <p class="reviewer-name">- Daniel W.</p>
-                </div>
-
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="review-text">
-                        "Velvet Touch is smooth and elegant. It's subtle but noticeable, and lasts all day. I wore it to a business meeting 
-                        and received compliments. Excellent choice!"
-                    </p>
-                    <p class="reviewer-name">- Thomas S.</p>
-                </div>
-
-                <div class="review-card">
-                    <div class="stars">★★★★☆</div>
-                    <p class="review-text">
-                        "Ocean Breeze is perfect for summer! Fresh, tropical, and uplifting. It reminds me of a beach vacation. Great for everyday wear!"
-                    </p>
-                    <p class="reviewer-name">- Anthony B.</p>
-                </div>
+            <!-- CUSTOMER REVIEWS -->
+            <h3 style="color: #2c1810; text-align: center; margin: 60px 0 40px; text-transform: uppercase; font-size: 1.8rem;">What Our Customers Say</h3>
+            
+            <div class="reviews-container" id="reviewsContainer">
+                <!-- Reviews will be loaded here by JavaScript -->
             </div>
         </div>
     </section>
+
+    <!-- FLOATING CART CARD -->
+    <div class="floating-cart" id="floatingCart" style="display: none;">
+        <button class="close-cart" id="closeCart">&times;</button>
+        <h3>Your Cart</h3>
+        <div class="cart-item-details" id="cartItemDetails"></div>
+        <div class="cart-actions">
+            <button class="btn-continue-shopping" id="continueShopping">Continue Shopping</button>
+            <button class="btn-checkout">Proceed to Checkout</button>
+        </div>
+    </div>
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -130,6 +117,13 @@
         </div>
     </footer>
 
+    <script src="database.js"></script>
     <script src="script.js"></script>
+    <script>
+        // Load reviews on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadReviews();
+        });
+    </script>
 </body>
 </html>
