@@ -1,0 +1,107 @@
+// Perfume products database
+const perfumeProducts = [
+    {
+        id: 1,
+        name: "Premium Essence",
+        price: 89.99,
+        description: "A luxurious fragrance with notes of oak, vanilla, and sandalwood. Perfect for the discerning gentleman.",
+        scent: "oak vanilla sandalwood",
+        image: "https://via.placeholder.com/250x350?text=Premium+Essence",
+        concentration: "100ml",
+        topNotes: "Bergamot, Lemon",
+        middleNotes: "Oak, Vanilla",
+        baseNotes: "Sandalwood, Musk",
+        longevity: "8-10 hours"
+    },
+    {
+        id: 2,
+        name: "Midnight Mystery",
+        price: 79.99,
+        description: "A dark and sensual fragrance with hints of amber, musk, and leather. Ideal for evening wear.",
+        scent: "amber musk leather",
+        image: "https://via.placeholder.com/250x350?text=Midnight+Mystery",
+        concentration: "100ml",
+        topNotes: "Black Pepper, Cardamom",
+        middleNotes: "Amber, Leather",
+        baseNotes: "Musk, Oud",
+        longevity: "10-12 hours"
+    },
+    {
+        id: 3,
+        name: "Fresh Horizon",
+        price: 74.99,
+        description: "A crisp and refreshing scent with citrus and sea notes. Perfect for daily wear and professional settings.",
+        scent: "citrus fresh sea",
+        image: "https://via.placeholder.com/250x350?text=Fresh+Horizon",
+        concentration: "100ml",
+        topNotes: "Grapefruit, Lime",
+        middleNotes: "Sea Salt, Aquatic",
+        baseNotes: "Cedar, White Musk",
+        longevity: "6-8 hours"
+    },
+    {
+        id: 4,
+        name: "Amber Aura",
+        price: 84.99,
+        description: "A warm and inviting fragrance with amber, spice, and woody notes. Sophisticated and alluring.",
+        scent: "amber spice woody",
+        image: "https://via.placeholder.com/250x350?text=Amber+Aura",
+        concentration: "100ml",
+        topNotes: "Cinnamon, Nutmeg",
+        middleNotes: "Amber, Incense",
+        baseNotes: "Patchouli, Sandalwood",
+        longevity: "9-11 hours"
+    },
+    {
+        id: 5,
+        name: "Silver Storm",
+        price: 94.99,
+        description: "A bold and powerful fragrance with metallic and aquatic notes. A statement of strength and confidence.",
+        scent: "metallic aquatic powerful",
+        image: "https://via.placeholder.com/250x350?text=Silver+Storm",
+        concentration: "100ml",
+        topNotes: "Mint, Ginger",
+        middleNotes: "Metallic Notes, Ozonic",
+        baseNotes: "Ambroxan, Vetiver",
+        longevity: "10-12 hours"
+    },
+    {
+        id: 6,
+        name: "Velvet Touch",
+        price: 89.99,
+        description: "A soft and elegant fragrance with velvety notes of iris and musk. Timeless and refined.",
+        scent: "iris musk soft elegant",
+        image: "https://via.placeholder.com/250x350?text=Velvet+Touch",
+        concentration: "100ml",
+        topNotes: "Pink Pepper, Bergamot",
+        middleNotes: "Iris, Rose",
+        baseNotes: "Musk, Cashmere",
+        longevity: "8-10 hours"
+    },
+    {
+        id: 7,
+        name: "Ocean Breeze",
+        price: 69.99,
+        description: "A fresh and breezy fragrance with marine and coconut notes. Reminiscent of a tropical paradise.",
+        scent: "marine coconut tropical fresh",
+        image: "https://via.placeholder.com/250x350?text=Ocean+Breeze",
+        concentration: "100ml",
+        topNotes: "Coconut, Lime",
+        middleNotes: "Marine Notes, Seaweed",
+        baseNotes: "Vanilla, Coconut",
+        longevity: "6-8 hours"
+    },
+    {
+        id: 8,
+        name: "Midnight Luxe",
+        price: 99.99,
+        description: "Our most exclusive fragrance with rare oud, frankincense, and rose notes. For the connoisseur.",
+        scent: "oud frankincense rose luxury",
+        image: "https://via.placeholder.com/250x350?text=Midnight+Luxe",
+        concentration: "100ml",
+        topNotes: "Saffron, Rose",
+        middleNotes: "Oud, Frankincense",
+        baseNotes: "Agarwood, Amber",
+        longevity: "12-14 hours"
+    }
+];
